@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardArray from './Cardlist';
 import {robots} from './robots';
 import Searchbar from './Searchbar';
+import Scroll from './scroll'
 import './App.css';
 
 class App extends Component {
@@ -25,7 +26,9 @@ class App extends Component {
     <div className='tc'>
       <h1 className="f1">FC Barcelona</h1>
       <Searchbar searchChange={this.onSearchChange}/>
-      <CardArray robots={filteredRobots}/>
+      <Scroll>
+        <CardArray robots={filteredRobots}/>
+      </Scroll>  
     </div>
   )
   }
